@@ -326,7 +326,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 12.056258
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -350,7 +350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528128069}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.71, y: -0.74, z: -10}
+  m_LocalPosition: {x: 9.03, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528128069}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ea5afe2bde938843b3dd345ec182c8d, type: 3}
   m_Name: 
@@ -397,7 +397,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626505723}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2600623, y: -4.2804174, z: 4.995153}
+  m_LocalPosition: {x: 2.92, y: -2.25, z: 0}
   m_LocalScale: {x: 22.70947, y: 0.5933017, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -638,7 +638,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843063017}
   m_LocalRotation: {x: -0, y: -0, z: 0.0017262892, w: 0.99999857}
-  m_LocalPosition: {x: -7.802089, y: -2.589, z: 0}
+  m_LocalPosition: {x: 12.17, y: 2.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -767,6 +767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2068834096}
   - component: {fileID: 2068834095}
+  - component: {fileID: 2068834097}
   m_Layer: 0
   m_Name: LevelGenerator
   m_TagString: Untagged
@@ -789,7 +790,6 @@ MonoBehaviour:
   levelPart_1: {fileID: 2055980437873141114, guid: ba24334f3b26fb841aeb4ff0ede54f30,
     type: 3}
   levelPart_Start: {fileID: 374148507}
-  player: {fileID: 1843063017}
 --- !u!4 &2068834096
 Transform:
   m_ObjectHideFlags: 0
@@ -805,6 +805,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2068834097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068834094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b39c5221581a0d4486eaf32337e85be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelPieces:
+  - name: Easy
+    prefab: {fileID: 7356880084664165296, guid: ba24334f3b26fb841aeb4ff0ede54f30,
+      type: 3}
+    probability: 1
+  - name: JumpPortion
+    prefab: {fileID: 3195116146037270611, guid: 07087b6a5d2d4634ba4292740284105e,
+      type: 3}
+    probability: 1
+  - name: Pit
+    prefab: {fileID: 3113215498132277114, guid: fed8f9a846fc87c4c9a13dddb370db8e,
+      type: 3}
+    probability: 1
+  _camera: {fileID: 1528128072}
+  drawDistance: 10
+  pieceLenght: 6
+  speed: 8
 --- !u!1 &2090578389
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class LevelGenerator : MonoBehaviour
 
     [SerializeField] private Transform levelPart_1;
     [SerializeField] private Transform levelPart_Start;
-    [SerializeField] private GameObject player;
+    //[SerializeField] private Player player;
 
     private Vector3 lastEndPosition;
 
@@ -26,9 +26,11 @@ public class LevelGenerator : MonoBehaviour
     {
         lastEndPosition = levelPart_Start.Find("EndPosition").position;
         SpawnLevelPart();
+        SpawnLevelPart();
+        SpawnLevelPart();
 
-        
-       
+
+
 
     }
 
