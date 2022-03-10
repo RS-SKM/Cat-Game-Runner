@@ -26,4 +26,9 @@ public class Bullet : MonoBehaviour
         Debug.Log(hitInfo.name);
         Destroy(gameObject);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("HIT!@!!");
+    }
+
 }

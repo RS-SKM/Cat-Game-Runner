@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public int health = 40;
 
-    public void TakeDamage (int damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
         if (health <= 0)
@@ -19,6 +19,4 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
-
 }
