@@ -821,7 +821,7 @@ MonoBehaviour:
   - name: Easy
     prefab: {fileID: 7356880084664165296, guid: ba24334f3b26fb841aeb4ff0ede54f30,
       type: 3}
-    probability: 1
+    probability: 10
   - name: JumpPortion
     prefab: {fileID: 3195116146037270611, guid: 07087b6a5d2d4634ba4292740284105e,
       type: 3}
@@ -832,7 +832,7 @@ MonoBehaviour:
     probability: 1
   _camera: {fileID: 1528128072}
   drawDistance: 10
-  pieceLenght: 6
+  pieceLenght: 10
   speed: 8
 --- !u!1 &2090578389
 GameObject:
