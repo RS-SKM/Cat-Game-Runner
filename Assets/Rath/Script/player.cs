@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        
+        gravity = -400;
     }
 
     void Update()
