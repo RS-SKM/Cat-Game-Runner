@@ -56,7 +56,7 @@ public class LevelController : MonoBehaviour
     void DespawnLevelPiece()
     {
         GameObject oldLevelPiece = activePieces.Dequeue();
-        Destroy(oldLevelPiece); 
+        Destroy(oldLevelPiece, 2f); 
     }
 
     void BuildProbabilityList()
