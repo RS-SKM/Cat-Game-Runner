@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Bec UI/MainMenu.unity
+    guid: 62b3d392bfac35c458130a21e1bb22da
   m_configObjects: {}
