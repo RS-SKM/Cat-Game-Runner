@@ -44,7 +44,8 @@ public class UIController : MonoBehaviour
 
     public void Quit()
     {
-        SceneManager.LoadScene("Menu");
+        Application.Quit();
+        //SceneManager.LoadScene("Menu");
     }
 
     public void Retry()
