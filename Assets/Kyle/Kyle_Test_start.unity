@@ -697,6 +697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
+  animator: {fileID: 0}
   runSpeed: 40
 --- !u!1 &1843063017
 GameObject:
@@ -803,6 +804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
+  animator: {fileID: 0}
   runSpeed: 120
 --- !u!114 &1843063025
 MonoBehaviour:
@@ -989,7 +991,7 @@ MonoBehaviour:
   _camera: {fileID: 1528128072}
   drawDistance: 10
   pieceLenght: 5
-  speed: 0
+  speed: 5
 --- !u!1 &2090578389
 GameObject:
   m_ObjectHideFlags: 0
