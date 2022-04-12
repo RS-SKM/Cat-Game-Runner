@@ -50,7 +50,7 @@ public class UIController : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("mainGame");
     }
 
     
