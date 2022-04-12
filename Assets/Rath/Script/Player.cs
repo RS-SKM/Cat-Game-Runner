@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
@@ -46,22 +47,25 @@ public class Player : MonoBehaviour
                 isHoldingJump = true;
                 holdJumpTimer = 0;
             }
-
-            if (Input.touchCount >= 1)
+            
+            if (EventSystem.current.currentSelectedGameObject == null)
             {
-                if (Input.touches[0].phase == TouchPhase.Began)
+                if (Input.touchCount >= 1)
                 {
-                    Debug.Log("Touch Pressed");
-                    isGrounded = false;
-                    velocity.y = jumpVelocity;
-                    isHoldingJump = true;
-                    holdJumpTimer = 0;
-                }
+                    if (Input.touches[0].phase == TouchPhase.Began)
+                    {
+                        Debug.Log("Touch Pressed");
+                        isGrounded = false;
+                        velocity.y = jumpVelocity;
+                        isHoldingJump = true;
+                        holdJumpTimer = 0;
+                    }
 
-                if (Input.touches[0].phase == TouchPhase.Ended)
-                {
-                    Debug.Log("Touch Lifted/Released");
-                    isHoldingJump = false;
+                    if (Input.touches[0].phase == TouchPhase.Ended)
+                    {
+                        Debug.Log("Touch Lifted/Released");
+                        isHoldingJump = false;
+                    }
                 }
             }
         }
