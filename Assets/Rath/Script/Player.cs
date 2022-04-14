@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-           
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Music/MainT", GetComponent<Transform>().position);
     }
 
     void Update()
@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 isGrounded = false;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Player Jump", GetComponent<Transform>().position);
                 velocity.y = jumpVelocity;
                 isHoldingJump = true;
                 holdJumpTimer = 0;
@@ -205,6 +206,7 @@ public class Player : MonoBehaviour
     void hitObstacle(Obstacle obstacle)
     {
         Destroy(obstacle.gameObject);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Player_Hit", GetComponent<Transform>().position);
         velocity.x *= 0.7f;
     }
 
