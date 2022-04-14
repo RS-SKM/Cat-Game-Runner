@@ -25,5 +25,6 @@ public class Gun : MonoBehaviour
     public void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/pistolzap", GetComponent<Transform>().position);
     }
 }
