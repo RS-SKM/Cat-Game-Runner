@@ -25,4 +25,12 @@ public class Bullet : MonoBehaviour
         }
         Debug.Log(hitInfo.gameObject.name);
     }
+
+    void Update()
+    {
+        if (transform.position.x > 60)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
