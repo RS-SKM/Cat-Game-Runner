@@ -9,6 +9,12 @@ public class PickupCoin : MonoBehaviour
     Currency script; // storing a reference to the Currency script
 
     public int addAmount; // this public integer is the amount of currency that each coin instance will award the player. This can be set from the inspector
+    Player player;
+
+    private void Awake()
+    {
+        player = GameObject.Find("Player").GetComponent<Player>(); //finding the game object called "Player", then checking for script componenet "Player"   
+    }
 
     void Start()
     {
@@ -17,11 +23,25 @@ public class PickupCoin : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D obj)
     {
-        if (obj.gameObject.tag == "Player")
+        if (obj.gameObject.tag == "Player") //player colliding with the coin, adding the coin value tot he currency counter, and destroying the coin
         {
 
             script.coin += addAmount;
             Destroy(gameObject);
         }
     }
+
+    private void FixedUpdate()
+    {
+        Vector2 pos = transform.position; //getting the position of the coin
+
+        pos.x -= player.velocity.x * Time.fixedDeltaTime; //setting the x position of the coin opposite to the player x velocity over time
+        if (pos.x < -100)
+        {
+            Destroy(gameObject); //if the coin passes this distance, destroy it
+        }
+
+        transform.position = pos; //moving the coin depending on it's x position
+    }
+
 }

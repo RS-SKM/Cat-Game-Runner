@@ -22,17 +22,17 @@ public class CoinSpawner : MonoBehaviour
     // need a public variable that takes the player's position and adds horizontal distance to spawn the coin
     void Update()
     {
-        timer -= Time.deltaTime;
+        timer -= Time.deltaTime; //setting time
         if (timer < 0)
         {
-            SpawnCoins(Random.Range(minCoins, maxCoins));
-            timer = Random.Range(minSpawnTime, maxSpawnTime);
+            SpawnCoins(Random.Range(minCoins, maxCoins)); //spawning a random amount of coins
+            timer = Random.Range(minSpawnTime, maxSpawnTime); //spacing the chain of coins apart
         }
     }
 
     void SpawnCoins(int spawnAmount)
     {
-        float height = Random.Range(minSpawnHeight, maxSpawnHeight);
+        float height = Random.Range(minSpawnHeight, maxSpawnHeight); //how high to spawn the coins
         for (int i = 0; i < spawnAmount; i++)
         {
             Vector3 spawnPosition = new Vector3(playerTransform.position.x + spawnDistance + (i * spacing), height, 0); // takes the player location and adds spawn distance variable (1 will get higher the more that are spawned) plus spacing (on the X), with being = height, and Z remaining 0
