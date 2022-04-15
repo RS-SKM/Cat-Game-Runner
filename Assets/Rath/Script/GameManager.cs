@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     async void Start()
     {
+        
         await UnityServices.InitializeAsync();
             // Send custom event
         Dictionary<string, object> parameters = new Dictionary<string, object>()

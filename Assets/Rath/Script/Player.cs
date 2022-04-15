@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-           
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Music/MainT", GetComponent<Transform>().position);
     }
 
     void Update()
@@ -42,26 +43,30 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 isGrounded = false;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Player Jump", GetComponent<Transform>().position);
                 velocity.y = jumpVelocity;
                 isHoldingJump = true;
                 holdJumpTimer = 0;
             }
-
-            if (Input.touchCount >= 1)
+            
+            if (EventSystem.current.currentSelectedGameObject == null)
             {
-                if (Input.touches[0].phase == TouchPhase.Began)
+                if (Input.touchCount >= 1)
                 {
-                    Debug.Log("Touch Pressed");
-                    isGrounded = false;
-                    velocity.y = jumpVelocity;
-                    isHoldingJump = true;
-                    holdJumpTimer = 0;
-                }
+                    if (Input.touches[0].phase == TouchPhase.Began)
+                    {
+                        Debug.Log("Touch Pressed");
+                        isGrounded = false;
+                        velocity.y = jumpVelocity;
+                        isHoldingJump = true;
+                        holdJumpTimer = 0;
+                    }
 
-                if (Input.touches[0].phase == TouchPhase.Ended)
-                {
-                    Debug.Log("Touch Lifted/Released");
-                    isHoldingJump = false;
+                    if (Input.touches[0].phase == TouchPhase.Ended)
+                    {
+                        Debug.Log("Touch Lifted/Released");
+                        isHoldingJump = false;
+                    }
                 }
             }
         }
@@ -201,6 +206,7 @@ public class Player : MonoBehaviour
     void hitObstacle(Obstacle obstacle)
     {
         Destroy(obstacle.gameObject);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Player_Hit", GetComponent<Transform>().position);
         velocity.x *= 0.7f;
     }
 
