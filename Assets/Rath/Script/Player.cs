@@ -30,10 +30,11 @@ public class Player : MonoBehaviour
 
     private Animator jumpAnim;
 
+
+
+
     void Start()
     {
-
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Music/CatOne", GetComponent<Transform>().position);
         jumpAnim = gameObject.GetComponent<Animator>();
         jumpAnim.Play("Run_Animation");
 
@@ -153,6 +154,7 @@ public class Player : MonoBehaviour
                     if (pos.y < ground.groundHeight)
                     {
                         velocity.x = 0;
+
                     }
                 }
             }
