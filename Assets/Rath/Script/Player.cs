@@ -28,9 +28,17 @@ public class Player : MonoBehaviour
     public LayerMask groundLayerMask;
     public LayerMask obstacleLayerMask;
 
+    private Animator jumpAnim;
+
     void Start()
     {
+<<<<<<< HEAD
         FMODUnity.RuntimeManager.PlayOneShot("event:/Music/CatOne", GetComponent<Transform>().position);
+=======
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Music/MainT", GetComponent<Transform>().position);
+        jumpAnim = gameObject.GetComponent<Animator>();
+        jumpAnim.Play("Run_Animation");
+>>>>>>> 2533f1629abe2256be9d23ca852a9f7f7055dfdd
     }
 
     void Update()
@@ -42,6 +50,7 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                jumpAnim.Play("Jump_Animation");
                 isGrounded = false;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Player Jump", GetComponent<Transform>().position);
                 velocity.y = jumpVelocity;
@@ -73,6 +82,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
+            jumpAnim.Play("Falling_Animation");
             isHoldingJump = false;
         }
 
