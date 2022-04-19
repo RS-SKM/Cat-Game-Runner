@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f966141fb02e634caa594ee19f10c52
+guid: 21c530ee6c2282147a5e0d1ceec47c5b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 29
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -128,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump_Sheet_Orange_0
+      name: Robot Run-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 0
         width: 64
-        height: 64
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9f36dc8d34100846abecb3985ed8ac9
-      internalID: 206369177
+      spriteID: 4e0f957bf3e52f74ebea106a8956ae64
+      internalID: 675381061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_Sheet_Orange_1
+      name: Robot Run-Sheet_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
+        y: 0
         width: 64
-        height: 64
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a87387eadc4cae842833f7a27023a98a
-      internalID: 883119882
+      spriteID: b63786209928bdc40bf9828ae975776f
+      internalID: 422037608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_Sheet_Orange_2
+      name: Robot Run-Sheet_2
       rect:
         serializedVersion: 2
         x: 128
-        y: 64
+        y: 0
         width: 64
-        height: 64
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cb604443745a52419c65f2a92eafda1
-      internalID: 1492790375
+      spriteID: cdb4aa19577e05c41b51bed211cb47bb
+      internalID: -862939339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_Sheet_Orange_3
+      name: Robot Run-Sheet_3
       rect:
         serializedVersion: 2
-        x: 0
+        x: 192
         y: 0
         width: 64
-        height: 64
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68f02a974ad667044b9bc1b3097bb8bb
-      internalID: 771888718
+      spriteID: 97dcddd09d10cd6449d702b7565abd3a
+      internalID: -1564287075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_Sheet_Orange_4
+      name: Robot Run-Sheet_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 256
         y: 0
         width: 64
-        height: 64
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,8 +226,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0e3a8506597c9d4984fc0c012381a92
-      internalID: -415136696
+      spriteID: be3497bea50454d4489ba856ce69dd96
+      internalID: 1770085981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot Run-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3b34e17cf8d0d42aa3c57f577b22b3
+      internalID: -1540851320
       vertices: []
       indices: 
       edges: []
@@ -243,11 +264,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Jump_Sheet_Orange_3: 771888718
-      Jump_Sheet_Orange_2: 1492790375
-      Jump_Sheet_Orange_1: 883119882
-      Jump_Sheet_Orange_0: 206369177
-      Jump_Sheet_Orange_4: -415136696
+      Robot Run-Sheet_0: 675381061
+      Robot Run-Sheet_3: -1564287075
+      Robot Run-Sheet_4: 1770085981
+      Robot Run-Sheet_2: -862939339
+      Robot Run-Sheet_5: -1540851320
+      Robot Run-Sheet_1: 422037608
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
