@@ -30,11 +30,14 @@ public class Player : MonoBehaviour
 
     private Animator jumpAnim;
 
+
+
+
     void Start()
     {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Music/MainT", GetComponent<Transform>().position);
         jumpAnim = gameObject.GetComponent<Animator>();
         jumpAnim.Play("Run_Animation");
+
     }
 
     void Update()
@@ -151,6 +154,7 @@ public class Player : MonoBehaviour
                     if (pos.y < ground.groundHeight)
                     {
                         velocity.x = 0;
+
                     }
                 }
             }
@@ -190,7 +194,7 @@ public class Player : MonoBehaviour
             Obstacle obstacle = obstHitX.collider.GetComponent<Obstacle>();
             if (obstacle != null)
             {
-                hitObstacle(obstacle);
+                HitObstacle(obstacle);
             }
         }
 
@@ -200,7 +204,7 @@ public class Player : MonoBehaviour
             Obstacle obstacle = obstHitY.collider.GetComponent<Obstacle>();
             if (obstacle != null)
             {
-                hitObstacle(obstacle);
+                HitObstacle(obstacle);
             }
         }
 
@@ -209,7 +213,7 @@ public class Player : MonoBehaviour
     }
 
 
-    void hitObstacle(Obstacle obstacle)
+    void HitObstacle(Obstacle obstacle)
     {
         Destroy(obstacle.gameObject);
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Player_Hit", GetComponent<Transform>().position);

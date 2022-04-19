@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{236657f0-146e-4248-88b4-96e178c68adf}">
+		<property name="assetPath">
+			<value>Player Attack.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.75002267573696146</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{aa6ad6d3-09a1-46c0-be9c-b116d0cca065}</destination>
+		</relationship>
+	</object>
+</objects>

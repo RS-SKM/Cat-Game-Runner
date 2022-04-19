@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{96558374-7af8-40f6-bebd-701f9e45f7c6}">
+		<property name="assetPath">
+			<value>3. player attack (laser gun.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>3.921875</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{aa6ad6d3-09a1-46c0-be9c-b116d0cca065}</destination>
+		</relationship>
+	</object>
+</objects>
