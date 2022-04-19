@@ -6,6 +6,9 @@ public class Parallax : MonoBehaviour
 {
 
     public float depth = 1;
+    public GameObject backgroundPrefab;
+    public Transform backgroundSpawn;
+    bool backgroundCreated = false;
 
     Player player;
 
@@ -15,9 +18,18 @@ public class Parallax : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        
+        if (!backgroundCreated)
+        {
+            Vector2 pos = transform.position;
+            if (pos.x <= -42)
+            {
+                CreateBackground();
+                backgroundCreated = true;            
+            }
+
+        }
     }
 
     // Update is called once per frame
@@ -25,12 +37,12 @@ public class Parallax : MonoBehaviour
     {
         float realVelocity = player.velocity.x / depth;
         Vector2 pos = transform.position;
-
         pos.x -= realVelocity * Time.fixedDeltaTime;
-
-        if (pos.x <= -1)
-            pos.x = 170;
-
         transform.position = pos;
+    }
+
+    void CreateBackground()
+    {
+        Instantiate(backgroundPrefab, backgroundSpawn.position, backgroundSpawn.rotation);
     }
 }
