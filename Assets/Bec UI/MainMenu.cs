@@ -11,4 +11,15 @@ public class MainMenu : MonoBehaviour
 
     }*/
 
+     public void CreditsMenu ()
+    {
+        SceneManager.LoadScene(2);
+
+    }
+
+    public void Menu ()
+    {
+        SceneManager.LoadScene(0);
+
+    }
 }
