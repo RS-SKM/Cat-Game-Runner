@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class PickupCoin : MonoBehaviour
 {
-    Currency script; // storing a reference to the Currency script
+    //Currency script; // storing a reference to the Currency script
 
-    public int addAmount; // this public integer is the amount of currency that each coin instance will award the player. This can be set from the inspector
+    public int coinValue; // this public integer is the amount of currency that each coin instance will award the player. This can be set from the inspector
     Player player;
 
     private void Awake()
@@ -18,15 +18,15 @@ public class PickupCoin : MonoBehaviour
 
     void Start()
     {
-        script = GameObject.FindWithTag("GameController").GetComponent<Currency>(); // This is looking for the object with the "GameController" tag.  
+
     }
 
     void OnTriggerEnter2D(Collider2D obj)
     {
         if (obj.gameObject.tag == "Player") //player colliding with the coin, adding the coin value tot he currency counter, and destroying the coin
         {
-
-            script.coin += addAmount;
+            //GameObject.FindObjectOfType<PSCurrency>().PSIncreaseCurrency(coinValue); //find the PScurrency script and then call the function, giving it the coinvalue value
+            GameObject.FindObjectOfType<Currency>().IncreaseCurrency(coinValue); //find the currency script and then call the function, giving it the coinvalue value
             Destroy(gameObject);
         }
     }
@@ -41,7 +41,7 @@ public class PickupCoin : MonoBehaviour
             Destroy(gameObject); //if the coin passes this distance, destroy it
         }
 
-        transform.position = pos; //moving the coin depending on it's x position
+        transform.position = pos; //moving the coin depending on its x position
     }
 
 }

@@ -219,5 +219,4 @@ public class Player : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Player_Hit", GetComponent<Transform>().position);
         velocity.x *= 0.7f;
     }
-
 }

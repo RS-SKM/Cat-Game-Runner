@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6b9a7284500ce458a6fd452bd2fc4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addAmount: 1
+  coinValue: 1
 --- !u!212 &5911358671755433071
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ SpriteRenderer:
   m_SortingOrder: 32767
   m_Sprite: {fileID: -2413806693520163455, guid: 557dd932593d880428f57495df0e0d50,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.010550636, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
