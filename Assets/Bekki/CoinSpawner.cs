@@ -19,7 +19,7 @@ public class CoinSpawner : MonoBehaviour
     }
 
 
-    // need a public variable that takes the player's position and adds horizontal distance to spawn the coin
+    // need a public variable that takes the player's position and adds horizontal distance to spawn the coin << this is in coin pickup script
     void Update()
     {
         timer -= Time.deltaTime; //setting time
