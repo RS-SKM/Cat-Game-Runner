@@ -32,13 +32,11 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-<<<<<<< HEAD
+
         FMODUnity.RuntimeManager.PlayOneShot("event:/Music/CatOne", GetComponent<Transform>().position);
-=======
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Music/MainT", GetComponent<Transform>().position);
         jumpAnim = gameObject.GetComponent<Animator>();
         jumpAnim.Play("Run_Animation");
->>>>>>> 2533f1629abe2256be9d23ca852a9f7f7055dfdd
+
     }
 
     void Update()
