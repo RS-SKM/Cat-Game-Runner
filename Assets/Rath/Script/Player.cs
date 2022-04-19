@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Music/MainT", GetComponent<Transform>().position);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Music/CatOne", GetComponent<Transform>().position);
     }
 
     void Update()
@@ -184,7 +184,7 @@ public class Player : MonoBehaviour
             Obstacle obstacle = obstHitX.collider.GetComponent<Obstacle>();
             if (obstacle != null)
             {
-                hitObstacle(obstacle);
+                HitObstacle(obstacle);
             }
         }
 
@@ -194,7 +194,7 @@ public class Player : MonoBehaviour
             Obstacle obstacle = obstHitY.collider.GetComponent<Obstacle>();
             if (obstacle != null)
             {
-                hitObstacle(obstacle);
+                HitObstacle(obstacle);
             }
         }
 
@@ -203,7 +203,7 @@ public class Player : MonoBehaviour
     }
 
 
-    void hitObstacle(Obstacle obstacle)
+    void HitObstacle(Obstacle obstacle)
     {
         Destroy(obstacle.gameObject);
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Player_Hit", GetComponent<Transform>().position);
