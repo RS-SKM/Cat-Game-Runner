@@ -33,11 +33,14 @@ public class Player : MonoBehaviour
 
 
 
-    void Start()
+    void Awake()
     {
         jumpAnim = gameObject.GetComponent<Animator>();
-        jumpAnim.Play("Run_Animation");
+    }
 
+    private void Start()
+    {
+        jumpAnim.Play("Run_Animation");
     }
 
     void Update()

@@ -96,7 +96,7 @@ MonoBehaviour:
   Path: Assets/Rath/FmodStudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637859746802508968
+  lastModified: 637861352311677773
   FileSizes:
   - Name: Desktop
     Value: 2410
@@ -588,7 +588,7 @@ MonoBehaviour:
   - {fileID: 890716684760396529}
   StringsBanks:
   - {fileID: -8229575486030304256}
-  cacheTime: 637859746802548860
+  cacheTime: 637861352311757554
   cacheVersion: 10
 --- !u!114 &499298173869206944
 MonoBehaviour:
@@ -632,7 +632,7 @@ MonoBehaviour:
   Path: Assets/Rath/FmodStudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637859746802498995
+  lastModified: 637861352311478315
   FileSizes:
   - Name: Desktop
     Value: 7615296
@@ -733,7 +733,7 @@ MonoBehaviour:
   Path: Assets/Rath/FmodStudio/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637859746802548860
+  lastModified: 637861352311757554
   FileSizes:
   - Name: Desktop
     Value: 733472
@@ -915,7 +915,7 @@ MonoBehaviour:
   Path: Assets/Rath/FmodStudio/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637859746802518943
+  lastModified: 637861352311697709
   FileSizes:
   - Name: Desktop
     Value: 494
