@@ -28,19 +28,23 @@ public class Player : MonoBehaviour
     public LayerMask groundLayerMask;
     public LayerMask obstacleLayerMask;
 
-    private Animator jumpAnim;
+    Animator playerAnim;
+    public bool isJumping;
+    public bool isFalling;
+    public bool isOnGround;
+
 
 
 
 
     void Awake()
     {
-        jumpAnim = gameObject.GetComponent<Animator>();
+        playerAnim = gameObject.GetComponentInChildren<Animator>();
     }
 
     private void Start()
     {
-        jumpAnim.Play("Run_Animation");
+
     }
 
     void Update()
@@ -52,7 +56,6 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                jumpAnim.Play("Jump_Animation");
                 isGrounded = false;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Player Jump", GetComponent<Transform>().position);
                 velocity.y = jumpVelocity;
@@ -84,7 +87,6 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            jumpAnim.Play("Falling_Animation");
             isHoldingJump = false;
         }
 
@@ -157,9 +159,21 @@ public class Player : MonoBehaviour
                     if (pos.y < ground.groundHeight)
                     {
                         velocity.x = 0;
-
                     }
                 }
+            }
+            if (velocity.y > 0)
+            {
+                playerAnim.SetBool("isOnGround", false);
+                playerAnim.SetBool("isFalling", false);
+                playerAnim.SetBool("isJumping", true);
+            }
+
+            if (velocity.y <= 0)
+            {
+                playerAnim.SetBool("isOnGround", false);
+                playerAnim.SetBool("isJumping", false);
+                playerAnim.SetBool("isFalling", true);
             }
         }
 
@@ -167,6 +181,10 @@ public class Player : MonoBehaviour
 
         if (isGrounded)
         {
+            playerAnim.SetBool("isOnGround", true);
+            playerAnim.SetBool("isJumping", false);
+            playerAnim.SetBool("isFalling", false);
+
             float velocityRatio = velocity.x / maxXVelocity;
             acceleration = maxAcceleration * (1 - velocityRatio);
             maxHoldJumpTime = maxMaxHoldJumpTime * velocityRatio;

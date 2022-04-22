@@ -87,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 40
   IsShot: 0
-  deathDelay: 0.5
+  deathDelay: 0.4
 --- !u!1 &8751349847966110426
 GameObject:
   m_ObjectHideFlags: 0
