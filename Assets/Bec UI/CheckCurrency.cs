@@ -4,25 +4,29 @@ using UnityEngine;
 
 public class CheckCurrency : MonoBehaviour
 {
-    public Canvas canvas;
+    public GameObject confirmPurchase;
+    public GameObject insufficientFunds;
+    public Currency currency;
+    public int cost;
 
 
-
-
-    private void Awake()
-    {
-      //  canvas = Canvas. ("Page Area for Tabs").GetComponent<>();
-    }
-
-    // Start is called before the first frame update
     void Start()
     {
-        
+        currency = FindObjectOfType<Currency>();
     }
 
     public void RunCheck()
     {
-      //  Debug.Log("Checking currency");
+        //  Debug.Log("Checking currency");
+        if (currency.coin >= cost)
+        {
+            confirmPurchase.SetActive(true);
+        }
+        else
+        {
+            insufficientFunds.SetActive(true);
+        }
+
 
     }
 
@@ -32,7 +36,7 @@ public class CheckCurrency : MonoBehaviour
 
 
 
-    // Update is called once per frame
+
     void Update()
     {
         
