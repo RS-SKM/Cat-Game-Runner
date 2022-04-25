@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckCurrency : MonoBehaviour
+public class ItemPurchaseButton : MonoBehaviour
 {
     public GameObject confirmPurchase;
     public GameObject insufficientFunds;
-    public Currency currency;
+    private Currency currency;
     public int cost;
-
+    [Header("Appearance info")]
+    public PlayerAppearance.ItemType itemType;
+    public int itemIndex;
 
     void Start()
     {
@@ -21,6 +23,7 @@ public class CheckCurrency : MonoBehaviour
         if (currency.coin >= cost)
         {
             confirmPurchase.SetActive(true);
+            confirmPurchase.GetComponentInChildren<ConfirmPurchaseButton>().SetupButton(itemType, itemIndex);
         }
         else
         {

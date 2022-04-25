@@ -879,7 +879,7 @@ GameObject:
   - component: {fileID: 625967915}
   - component: {fileID: 625967917}
   m_Layer: 5
-  m_Name: PSCurrency
+  m_Name: SessionCurrencyIndicatortxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1011,10 +1011,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 625967913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf0afa6863f90f2428ccad6a2d314dba, type: 3}
+  m_Script: {fileID: 11500000, guid: 0865fac81fd4eca49a20007e671f11e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPS: 0
+  coinType: 1
 --- !u!1 &708046228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,6 +1294,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &803305377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 803305379}
+  - component: {fileID: 803305378}
+  m_Layer: 0
+  m_Name: Currency
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &803305378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803305377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7998acd4e4de5f64fab0004db96b3318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: 0
+  sessionCoin: 0
+--- !u!4 &803305379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803305377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.305157, y: 16.036236, z: -0.20285934}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &841250271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,7 +1439,7 @@ GameObject:
   - component: {fileID: 1063237099}
   - component: {fileID: 1063237101}
   m_Layer: 5
-  m_Name: Currency
+  m_Name: CurrencyIndicatortxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1528,6 +1574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0865fac81fd4eca49a20007e671f11e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinType: 0
 --- !u!1 &1083213926
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,6 +2450,7 @@ GameObject:
   - component: {fileID: 1653081287}
   - component: {fileID: 1653081286}
   - component: {fileID: 1653081285}
+  - component: {fileID: 1653081288}
   m_Layer: 5
   m_Name: RetryButton
   m_TagString: Untagged
@@ -2487,6 +2535,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1653081288}
+        m_TargetAssemblyTypeName: ResetSessionCurrency, Assembly-CSharp
+        m_MethodName: ResetCurrency
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1653081286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2525,6 +2585,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653081283}
   m_CullTransparentMesh: 1
+--- !u!114 &1653081288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653081283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb4287c15bf9f3f4ea86534373d3dac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1696106392
 GameObject:
   m_ObjectHideFlags: 0
