@@ -32,16 +32,4 @@ public class ItemPurchaseButton : MonoBehaviour
 
 
     }
-
-
-
-
-
-
-
-
-    void Update()
-    {
-        
-    }
 }
