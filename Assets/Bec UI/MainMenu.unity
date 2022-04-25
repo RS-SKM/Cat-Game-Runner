@@ -10495,6 +10495,8 @@ MonoBehaviour:
   confirmPurchase: {fileID: 1048637208}
   assignedType: 0
   assignedIndex: 0
+  itemCost: 0
+  currency: {fileID: 0}
 --- !u!1 &1039540558
 GameObject:
   m_ObjectHideFlags: 0

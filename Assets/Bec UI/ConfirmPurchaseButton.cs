@@ -6,25 +6,31 @@ public class ConfirmPurchaseButton : MonoBehaviour
 {
     public PlayerAppearance playerAppearance;
     public GameObject confirmPurchase;
-    public PlayerAppearance.ItemType assignedType; // everytime a button is clicked this will setup the type
-    public int assignedIndex; // this is deciding what the index of the item (from PlayerAppearance enums) is
+    [HideInInspector]public PlayerAppearance.ItemType assignedType; // this is the avriable that will store the item's assigned type
+    [HideInInspector]public int assignedIndex; // this is the variable to store the item's assigned index
+    [HideInInspector]public int itemCost; // the variable to store the cost of the item
+    [HideInInspector]public Currency currency;
 
 
     private void Start()
     {
         playerAppearance = FindObjectOfType<PlayerAppearance>();
+        currency = FindObjectOfType<Currency>();
     }
 
-    public void SetupButton(PlayerAppearance.ItemType itemType, int itemIndex) // this function is called by the item buy button
+    public void SetupButton(PlayerAppearance.ItemType itemType, int itemIndex, int cost) // this function is called by the item purchase button
     {
         assignedType = itemType;
         assignedIndex = itemIndex;
+        itemCost = cost;
+
     }
 
     public void BuyItem()
     {
         playerAppearance.SetAppearance(assignedType, assignedIndex); //running the function in the playerAppearance script
-        confirmPurchase.SetActive(false);
+        currency.DecreaseCurrency(itemCost); //this runs the decrease currency function, removing the cost of the item from the currency value
+        confirmPurchase.SetActive(false); //this turns off the confirm purchase screen
     }
 
 

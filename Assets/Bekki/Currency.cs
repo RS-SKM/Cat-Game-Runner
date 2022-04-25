@@ -27,4 +27,13 @@ public class Currency : MonoBehaviour
         sessionCoin += increase;
     }
 
+    public void DecreaseCurrency(int decrease)
+    {
+        coin -= decrease; //decreases by the value given to by ConfirmPurchase script
+        if (coin < 0) //This is just making sure that it won't display a negative number of coins
+        {
+            coin = 0;
+        }
+    }
+
 }
