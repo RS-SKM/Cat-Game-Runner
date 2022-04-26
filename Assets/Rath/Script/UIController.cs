@@ -31,6 +31,8 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int distance = Mathf.FloorToInt(player.distance);
+        distanceText.text = distance + " m";
         if (player.isDead)
         {
             Invoke("RetryScreen", 0.1f);
