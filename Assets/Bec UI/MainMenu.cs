@@ -22,4 +22,14 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(0);
 
     }
+
+    public void Tutorial()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     public bool isJumping;
     public bool isFalling;
     public bool isOnGround;
+    public bool isDeadAnim;
 
 
 
@@ -106,7 +107,10 @@ public class Player : MonoBehaviour
         if (pos.y < -20)
         {
             isDead = true;
-            
+            playerAnim.SetBool("isOnGround", false);
+            playerAnim.SetBool("isFalling", false);
+            playerAnim.SetBool("isJumping", false);
+            playerAnim.SetBool("isDeadAnim", true);
         }
 
         if (!isGrounded)
@@ -181,9 +185,9 @@ public class Player : MonoBehaviour
 
         if (isGrounded)
         {
-            playerAnim.SetBool("isOnGround", true);
             playerAnim.SetBool("isJumping", false);
             playerAnim.SetBool("isFalling", false);
+            playerAnim.SetBool("isOnGround", true);
 
             float velocityRatio = velocity.x / maxXVelocity;
             acceleration = maxAcceleration * (1 - velocityRatio);

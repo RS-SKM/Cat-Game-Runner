@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Bec UI/Credits.unity
     guid: 3ac6ec25d337ba946a3dd3439fabb9a8
+  - enabled: 1
+    path: Assets/Rath/Scene/tutorial.unity
+    guid: dbbf669ef33aa41438c0ac745b18ad10
   m_configObjects: {}

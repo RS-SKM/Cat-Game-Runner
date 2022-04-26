@@ -30,10 +30,24 @@ public class Ground : MonoBehaviour
             
     }
 
-    // Update is called once per frame
+    public GameObject coinPrefab;
+    public Transform playerTransform;
+    //public int minCoins = 3, maxCoins = 5;
+    public float spawnDistance = 100f;
+    public float spacing = 2f;
+    //public float minSpawnTime = 3, maxSpawnTime = 5;
+    //public float minSpawnHeight = 10, maxSpawnHeight = 20;
+    //public float sharedHeight;
+    //private float timer;
+
     void Update()
     {
-        
+        /*timer -= Time.deltaTime; //setting time
+        if (timer < 0)
+        {
+            SpawnCoins(Random.Range(minCoins, maxCoins)); //spawning a random amount of coins
+            timer = Random.Range(minSpawnTime, maxSpawnTime); //spacing the chain of coins apart
+        }*/
     }
 
     private void FixedUpdate()
@@ -108,7 +122,16 @@ public class Ground : MonoBehaviour
             float x = Random.Range(left, right);
             Vector2 boxPos = new Vector2(x, y);
             box.transform.position = boxPos;
+            
+        }
+
+        int coinNum = Random.Range(0, 6);
+        for (int j=0; j<obstacleNum; j++)
+        {
+            float height = pos.y + 35f;
+            Vector3 spawnPosition = new Vector3(playerTransform.position.x + spawnDistance + (j * spacing), height, 0); // takes the player location and adds spawn distance variable (1 will get higher the more that are spawned) plus spacing (on the X), with being = height, and Z remaining 0
+            Instantiate(coinPrefab, spawnPosition, Quaternion.identity);
+
         }
     }
-
 }

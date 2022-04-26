@@ -31,21 +31,24 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int distance = Mathf.FloorToInt(player.distance);
-        distanceText.text = distance + " m";
-
         if (player.isDead)
         {
-            results.SetActive(true);
-            finalDistanceText.text = distance + " m";
+            Invoke("RetryScreen", 0.1f);
         }
     }
 
-
-    public void Quit()
+    void RetryScreen()
     {
-        Application.Quit();
-        //SceneManager.LoadScene("Menu");
+        int distance = Mathf.FloorToInt(player.distance);
+        distanceText.text = distance + " m";
+        results.SetActive(true);
+        finalDistanceText.text = distance + " m";
+    }
+
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void Retry()
