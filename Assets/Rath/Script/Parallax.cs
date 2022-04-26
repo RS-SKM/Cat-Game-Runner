@@ -23,7 +23,7 @@ public class Parallax : MonoBehaviour
         if (!backgroundCreated)
         {
             Vector2 pos = transform.position;
-            if (pos.x <= -42)
+            if (pos.x <= -41)
             {
                 CreateBackground();
                 backgroundCreated = true;            
