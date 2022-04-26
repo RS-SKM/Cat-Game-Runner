@@ -96,10 +96,10 @@ MonoBehaviour:
   Path: Assets/Rath/FmodStudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637859665830904030
+  lastModified: 637865684066372117
   FileSizes:
   - Name: Desktop
-    Value: 2410
+    Value: 2380
   Exists: 1
 --- !u!114 &-6961262032332608479
 MonoBehaviour:
@@ -506,33 +506,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1532
---- !u!114 &-312816018310884890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Coin/14. small coin pick up
-  m_EditorClassIdentifier: 
-  Path: event:/Coin/14. small coin pick up
-  Guid:
-    Data1: 1841922084
-    Data2: 1128870101
-    Data3: 82204857
-    Data4: 358630195
-  Banks:
-  - {fileID: 2316441455104178601}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 408
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,13 +526,11 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -3191108612876951880}
   - {fileID: 499298173869206944}
-  - {fileID: -312816018310884890}
   - {fileID: 1515603335909891959}
   - {fileID: -6961262032332608479}
   - {fileID: 2731117641782939161}
   - {fileID: -5791431545898211195}
   - {fileID: -924080584173341977}
-  - {fileID: 2811790567075418714}
   - {fileID: -4590601209773494868}
   - {fileID: 4618968994334887034}
   - {fileID: -8733204382668061885}
@@ -583,12 +554,14 @@ MonoBehaviour:
   - {fileID: -6175171384651766799}
   - {fileID: -8527285133929016906}
   - {fileID: -1724696003330284853}
+  - {fileID: 2239387413393811793}
+  - {fileID: 2617352017703892876}
   EditorParameters: []
   MasterBanks:
   - {fileID: 890716684760396529}
   StringsBanks:
   - {fileID: -8229575486030304256}
-  cacheTime: 637859665830934041
+  cacheTime: 637865684067038154
   cacheVersion: 10
 --- !u!114 &499298173869206944
 MonoBehaviour:
@@ -632,7 +605,7 @@ MonoBehaviour:
   Path: Assets/Rath/FmodStudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637859665830894032
+  lastModified: 637865684066352109
   FileSizes:
   - Name: Desktop
     Value: 7615296
@@ -718,6 +691,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4392
+--- !u!114 &2239387413393811793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Coin/CoinP
+  m_EditorClassIdentifier: 
+  Path: event:/Coin/CoinP
+  Guid:
+    Data1: 1841922084
+    Data2: 1128870101
+    Data3: 82204857
+    Data4: 358630195
+  Banks:
+  - {fileID: 2316441455104178601}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 408
 --- !u!114 &2316441455104178601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,11 +733,38 @@ MonoBehaviour:
   Path: Assets/Rath/FmodStudio/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637859665830934041
+  lastModified: 637865684067038154
   FileSizes:
   - Name: Desktop
-    Value: 733472
+    Value: 733920
   Exists: 1
+--- !u!114 &2617352017703892876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Character/RobotHit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Character/RobotHit
+  Guid:
+    Data1: -842146992
+    Data2: 1076164946
+    Data3: -98668387
+    Data4: -1421789510
+  Banks:
+  - {fileID: 2316441455104178601}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 270
 --- !u!114 &2731117641782939161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -765,33 +792,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1763
---- !u!114 &2811790567075418714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Character/sci fi pistol 2
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Character/sci fi pistol 2
-  Guid:
-    Data1: -842146992
-    Data2: 1076164946
-    Data3: -98668387
-    Data4: -1421789510
-  Banks:
-  - {fileID: 2316441455104178601}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 270
 --- !u!114 &3475295969279463271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,7 +915,7 @@ MonoBehaviour:
   Path: Assets/Rath/FmodStudio/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637859665830914033
+  lastModified: 637865684066392105
   FileSizes:
   - Name: Desktop
     Value: 494

@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
-
+    private FMOD.Studio.EventInstance instance;
     public float gravity;
     public Vector2 velocity;
     public float maxXVelocity = 100;
@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
     public bool isDeadAnim;
 
 
+    public bool IsMusicPlaying = false;
+
 
 
 
@@ -43,13 +45,20 @@ public class Player : MonoBehaviour
         playerAnim = gameObject.GetComponentInChildren<Animator>();
     }
 
+
     private void Start()
     {
+        instance = FMODUnity.RuntimeManager.CreateInstance("event:/Music/CatOne");
 
+        if (IsMusicPlaying == false)
+        {
+            MusicPlayer();
+        }
     }
 
     void Update()
     {
+  
         Vector2 pos = transform.position;
         float groundDistance = Mathf.Abs(pos.y - groundHeight);
 
@@ -91,9 +100,23 @@ public class Player : MonoBehaviour
             isHoldingJump = false;
         }
 
+        
+        
+      
+
+   
+
+    }
+
+    public void MusicPlayer()
+    {
+        IsMusicPlaying = true;
+        instance.start();
 
 
     }
+
+
 
     private void FixedUpdate()
     {
@@ -163,6 +186,8 @@ public class Player : MonoBehaviour
                     if (pos.y < ground.groundHeight)
                     {
                         velocity.x = 0;
+                        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                        instance.release();
                     }
                 }
             }

@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/RobotHit", GetComponent<Transform>().position);
             Die();
         }
     }

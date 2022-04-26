@@ -6,9 +6,14 @@ using Unity.Services.Core;
 
 public class GameManager : MonoBehaviour
 {
+
+    public bool IsMusicPlaying = false;
+        
+      
     // Start is called before the first frame update
     async void Start()
     {
+        
         
         await UnityServices.InitializeAsync();
             // Send custom event
@@ -24,6 +29,10 @@ public class GameManager : MonoBehaviour
 
         // Optional - You can call Events.Flush() to send the event immediately
         Events.Flush();  
+
+       
+
     }
+
               
 }

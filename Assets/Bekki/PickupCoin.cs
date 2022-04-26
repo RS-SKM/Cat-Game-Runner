@@ -25,6 +25,7 @@ public class PickupCoin : MonoBehaviour
     {
         if (obj.gameObject.tag == "Player") //player colliding with the coin, adding the coin value tot he currency counter, and destroying the coin
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Coin/CoinP", GetComponent<Transform>().position);//plays the soundeffect of picking up the coin
             //GameObject.FindObjectOfType<PSCurrency>().PSIncreaseCurrency(coinValue); //find the PScurrency script and then call the function, giving it the coinvalue value
             GameObject.FindObjectOfType<Currency>().IncreaseCurrency(coinValue); //find the currency script and then call the function, giving it the coinvalue value
             Destroy(gameObject);
