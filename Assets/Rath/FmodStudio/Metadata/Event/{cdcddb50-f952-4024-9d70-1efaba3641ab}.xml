@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{cdcddb50-f952-4024-9d70-1efaba3641ab}">
 		<property name="name">
-			<value>sci fi pistol 2</value>
+			<value>RobotHit</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>
@@ -92,6 +92,12 @@
 		<property name="length">
 			<value>0.27097916666666666</value>
 		</property>
+		<property name="volume">
+			<value>5.5</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{95cdd2e7-649b-4324-bfff-e45d8259cdb3}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{40c85e1b-a928-43f8-8552-877d3ba25734}</destination>
 		</relationship>
@@ -117,6 +123,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{5ae0eb75-63d3-4f80-b669-f22a7ad26957}" />
 	<object class="MixerBusFader" id="{f0f133b4-d240-44ba-8ca2-12b99f31c345}" />
+	<object class="RandomizerModulator" id="{95cdd2e7-649b-4324-bfff-e45d8259cdb3}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>15.5</value>
+		</property>
+	</object>
 	<object class="MixerBusEffectChain" id="{147fbc9b-3bee-4ad4-868c-1d120b4f3235}">
 		<relationship name="effects">
 			<destination>{282be7d0-6dd7-4aae-8fa2-b8b2693437d6}</destination>

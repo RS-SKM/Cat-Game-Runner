@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{6dc98024-30d5-4349-b958-e60433436015}">
 		<property name="name">
-			<value>14. small coin pick up</value>
+			<value>CoinP</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>
@@ -92,6 +92,11 @@
 		<property name="length">
 			<value>0.4085625</value>
 		</property>
+		<property name="name" />
+		<relationship name="modulators">
+			<destination>{56114436-4c56-40da-a1b7-d129fb86b10b}</destination>
+			<destination>{6beda1a5-f5e3-4eb5-8de6-e046946ee307}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{e44b0ba5-1b78-412e-850d-797a5809e0bb}</destination>
 		</relationship>
@@ -117,6 +122,22 @@
 	</object>
 	<object class="MixerBusPanner" id="{7b6f5ae4-87f4-42a8-87e2-6ccc21ff7f9d}" />
 	<object class="MixerBusFader" id="{c3f4c7a7-3ca1-4892-8cbd-818dccb51605}" />
+	<object class="RandomizerModulator" id="{56114436-4c56-40da-a1b7-d129fb86b10b}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>8.33333397</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{6beda1a5-f5e3-4eb5-8de6-e046946ee307}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="amount">
+			<value>4</value>
+		</property>
+	</object>
 	<object class="MixerBusEffectChain" id="{8356c968-ff72-4c93-a232-9fa12e8fcd31}">
 		<relationship name="effects">
 			<destination>{e1abc4aa-ca45-4bbd-8437-b8455233907f}</destination>
