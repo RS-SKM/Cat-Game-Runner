@@ -46,7 +46,7 @@ MonoBehaviour:
     Data3: -307558739
     Data4: -185344697
   Banks:
-  - {fileID: 890716684760396529}
+  - {fileID: 5524956037991428495}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -96,10 +96,10 @@ MonoBehaviour:
   Path: Assets/Rath/FmodStudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637866509658301160
+  lastModified: 637868355732460724
   FileSizes:
   - Name: Desktop
-    Value: 2416
+    Value: 2462
   Exists: 1
 --- !u!114 &-6961262032332608479
 MonoBehaviour:
@@ -444,14 +444,14 @@ MonoBehaviour:
     Data3: -2103266921
     Data4: -1107834181
   Banks:
-  - {fileID: 890716684760396529}
+  - {fileID: 5524956037991428495}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 360689
+  Length: 300071
 --- !u!114 &-924080584173341977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,7 +532,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 192000
+  Length: 175000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,12 +584,13 @@ MonoBehaviour:
   - {fileID: 2239387413393811793}
   - {fileID: 2617352017703892876}
   - {fileID: -6313296076256285}
+  - {fileID: 4141667492767479232}
   EditorParameters: []
   MasterBanks:
   - {fileID: 890716684760396529}
   StringsBanks:
   - {fileID: -8229575486030304256}
-  cacheTime: 637866509658440797
+  cacheTime: 637868355734081088
   cacheVersion: 10
 --- !u!114 &499298173869206944
 MonoBehaviour:
@@ -633,10 +634,10 @@ MonoBehaviour:
   Path: Assets/Rath/FmodStudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637866509658281563
+  lastModified: 637868355732440717
   FileSizes:
   - Name: Desktop
-    Value: 7616000
+    Value: 4404672
   Exists: 1
 --- !u!114 &1208634020953483154
 MonoBehaviour:
@@ -761,7 +762,7 @@ MonoBehaviour:
   Path: Assets/Rath/FmodStudio/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637866509658440797
+  lastModified: 637868355734081088
   FileSizes:
   - Name: Desktop
     Value: 733920
@@ -874,6 +875,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
+--- !u!114 &4141667492767479232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/CatThree
+  m_EditorClassIdentifier: 
+  Path: event:/Music/CatThree
+  Guid:
+    Data1: 2104723681
+    Data2: 1128303351
+    Data3: -264665166
+    Data4: -729959700
+  Banks:
+  - {fileID: 890716684760396529}
+  - {fileID: 5524956037991428495}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 180689
 --- !u!114 &4618968994334887034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,10 +972,10 @@ MonoBehaviour:
   Path: Assets/Rath/FmodStudio/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637866509658371249
+  lastModified: 637868355733451045
   FileSizes:
   - Name: Desktop
-    Value: 2509344
+    Value: 10125632
   Exists: 1
 --- !u!114 &6820872020385237905
 MonoBehaviour:
