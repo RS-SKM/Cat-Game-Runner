@@ -7,17 +7,17 @@ using UnityEngine.SceneManagement;
 public class UIController : MonoBehaviour
 {
     Player player;
-    Text distanceText;
+    TMPro.TextMeshProUGUI distanceText;
 
     GameObject results;
-    Text finalDistanceText;
+    TMPro.TextMeshProUGUI finalDistanceText;
 
     private void Awake()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
-        distanceText = GameObject.Find("DistanceText").GetComponent<Text>();
+        distanceText = GameObject.Find("DistanceText").GetComponent<TMPro.TextMeshProUGUI>();
         results = GameObject.Find("Results");
-        finalDistanceText = GameObject.Find("FinalDistanceText").GetComponent<Text>();
+        finalDistanceText = GameObject.Find("FinalDistanceText").GetComponent<TMPro.TextMeshProUGUI>();
 
         results.SetActive(false);
     }
